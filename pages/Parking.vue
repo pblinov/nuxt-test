@@ -1,17 +1,5 @@
 <template>
-  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <div>
-    <nav class="top-menu">
-      <a class="logo" href=""><img src="~assets/gerb_sankt-peterburga.png" class="gerb"></a>
-      <ul class="menu-main">
-        <p class="title">DutyFree</p>
-        <li><a href="#">Account</a></li>
-        <li><a href="#">Flight</a></li>
-        <li><a href="#">Shopping</a></li>
-        <li><a href="#">Parking</a></li>
-      </ul>
-    </nav>
-  </div>
+
 </template>
 
 <script>
