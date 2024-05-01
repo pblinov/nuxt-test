@@ -1,0 +1,198 @@
+.gerb {
+  max-width: 100%;
+}
+
+.book{
+  display: flex;
+  align-items: center;
+}
+
+.imgParking {
+  width: 100%;
+  height: auto;
+  -webkit-mask-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 1)), to(rgba(0, 0, 0, 0)));
+}
+
+.imgParking::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.parking {
+  position: sticky;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+}
+
+.StockParking{
+  display: inline-block;
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 25px;
+  font-family: 'Arimo', sans-serif;
+  font-weight: bold;
+  color: #0a1454;
+}
+
+.stockParking{
+  display: inline-block;
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 18px;
+  font-family: 'Arimo', sans-serif;
+  font-weight: bold;
+  color: #0a1454;
+}
+
+.buttonForBook{
+  border: 0;
+  line-height: 2.5;
+  padding: 0 20px;
+  font-size: 1rem;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  border-radius: 10px;
+  background-color: rgb(0, 88, 220);
+  background-image: linear-gradient(
+    to top left,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2) 30%,
+    rgba(0, 0, 0, 0)
+  );
+  box-shadow:
+    inset 2px 2px 3px rgba(255, 255, 255, 0.6),
+    inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+}
+
+.buttonForBook:hover {
+  background-color: rgb(0, 88, 220);
+}
+
+.buttonForBook:active {
+  box-shadow:
+    inset -2px -2px 3px rgba(255, 255, 255, 0.6),
+    inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+
+@media screen and (min-width: 800px) {
+  .gerb {
+    max-width: 100%;
+  }
+}
+
+.top-menu {
+  background: rgba(255, 255, 255, .5);
+  box-shadow: 3px 0 7px rgba(0, 0, 0, .3);
+  padding: 20px;
+}
+
+.top-menu:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.menu-main {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  float: right;
+}
+
+
+.menu-main li {
+  display: inline-block;
+}
+
+.title {
+  display: inline-block;
+  text-align: center;
+  letter-spacing: 2px;
+  font-family: 'Arimo', sans-serif;
+  font-weight: bold;
+  color: #0a1454;
+  transition: .3s linear;
+}
+
+.menu-main a {
+  text-decoration: none;
+  display: block;
+  position: relative;
+  line-height: 61px;
+  padding-left: 20px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-family: 'Arimo', sans-serif;
+  font-weight: bold;
+  color: #2440f7;
+  transition: .3s linear;
+}
+
+.logo {
+  display: inline-block;
+  width: 4%;
+}
+
+.menu-main a:before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  background: #2440f7;
+  position: absolute;
+  left: 50%;
+  transform: rotate(45deg) translateX(6.5px);
+  opacity: 0;
+  transition: .3s linear;
+}
+
+.menu-main a:hover:before {
+  opacity: 1;
+}
+
+@media (max-width: 800px) {
+  .menu-main {
+    float: none;
+    padding-top: 20px;
+  }
+
+  .top-menu {
+    text-align: center;
+    padding: 20px 0 0 0;
+  }
+
+  .menu-main a {
+    padding: 0 10px;
+    font-size: 15px;
+  }
+
+  .StockParking{
+    float: none;
+    font-size: 15px;
+  }
+
+  .stockParking{
+    float: none;
+    font-size: 10px;
+  }
+
+  .buttonForBook{
+    font-size: 0.3rem;
+  }
+
+  .menu-main a:before {
+    transform: rotate(45deg) translateX(-6px);
+  }
+}
+
+@media (max-width: 800px) {
+  .menu-main li {
+    display: block;
+  }
+}
