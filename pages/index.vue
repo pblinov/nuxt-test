@@ -17,36 +17,23 @@
     </div>
 
     <div class="shop">
-
-
-      <div class="cosmetic">
-        <figure class="cosmetic-border">
-          <img src="~assets/cosmetic.jpg" class="imgCosmetic" alt="cosmetic">
-          <figcaption><a class="s10" href="#">Beauty</a></figcaption>
-        </figure>
-      </div>
-
-
-      <div class="food">
-        <figure class="food-border">
-          <img src="~assets/food.jpg" class="imgFood" alt="food">
-          <figcaption><a class="s10" href="#">Food</a></figcaption>
-        </figure>
-      </div>
-
-      <div class="jewelry">
-        <figure class="jewelry-border">
-          <img src="~assets/Swarovski.jpg" class="imgJewelry" alt="jewelry">
-          <figcaption><a class="s10" href="#" >Jewelry</a></figcaption>
-        </figure>
-      </div>
-
+      <category caption="Beauty" imageName="cosmetic.jpg"></category>
+      <category caption="Food" imageName="food.jpg"></category>
+      <category caption="Jewelry" imageName="Swarovski.jpg"></category>
     </div>
 
   </div>
 </template>
 
 <script>
+import {reactive} from "vue";
+
+const categories = reactive([
+  {caption: "Beauty", imageName: "cosmetic.jpg"},
+    {caption: "Food", imageName: "food.jpg"},
+    {caption: "Jewelry", imageName: "Swarovski.jpg"}
+])
+
 export default {
   name: "Main"
 }
