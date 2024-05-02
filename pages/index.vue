@@ -17,26 +17,20 @@
     </div>
 
     <div class="shop">
-      <category caption="Beauty" imageName="cosmetic.jpg"></category>
-      <category caption="Food" imageName="food.jpg"></category>
-      <category caption="Jewelry" imageName="Swarovski.jpg"></category>
+      <category v-for="c in categories" :caption="c.caption" :imageName="c.imageName"></category>
     </div>
 
   </div>
 </template>
 
-<script>
+<script setup>
 import {reactive} from "vue";
 
 const categories = reactive([
   {caption: "Beauty", imageName: "cosmetic.jpg"},
-    {caption: "Food", imageName: "food.jpg"},
-    {caption: "Jewelry", imageName: "Swarovski.jpg"}
+  {caption: "Food", imageName: "food.jpg"},
+  {caption: "Jewelry", imageName: "Swarovski.jpg"}
 ])
-
-export default {
-  name: "Main"
-}
 </script>
 
 <style scoped>
