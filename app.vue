@@ -16,10 +16,15 @@
     </div>
 
     <NuxtPage />
+
+    <ol>
+      <li v-for="item in store.items">{{ item }}</li>
+    </ol>
   </div>
 </template>
 
 <script setup lang="ts">
+import {store} from "~/state/state";
 </script>
 
 <style>

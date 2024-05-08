@@ -20,17 +20,24 @@
       <category v-for="c in categories" :caption="c.caption" :imageName="c.imageName"></category>
     </div>
 
+    <button @click="addItem">Add random integer</button>
+
   </div>
 </template>
 
 <script setup>
 import {reactive} from "vue";
+import {store} from "~/state/state.ts";
 
 const categories = reactive([
   {caption: "Beauty", imageName: "cosmetic.jpg"},
   {caption: "Food", imageName: "food.jpg"},
   {caption: "Jewelry", imageName: "Swarovski.jpg"}
 ])
+
+function addItem() {
+  store.add()
+}
 </script>
 
 <style scoped>
