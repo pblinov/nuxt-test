@@ -20,7 +20,9 @@
       <category v-for="c in categories" :caption="c.caption" :imageName="c.imageName"></category>
     </div>
 
-    <button @click="addItem">Add random integer</button>
+    <input v-model="item.text">
+    <input v-model="item.quantity">
+    <button @click="addItem">Add item</button>
 
   </div>
 </template>
@@ -35,9 +37,15 @@ const categories = reactive([
   {caption: "Jewelry", imageName: "Swarovski.jpg"}
 ])
 
+const item = reactive({
+  text: "",
+  quantity: 0
+})
+
 function addItem() {
-  store.add()
+  store.add(item.text, item.quantity)
 }
+
 </script>
 
 <style scoped>
